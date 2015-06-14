@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "User", type: :feature do
-  context "on the jobs index page" do 
-    before(:each ) do 
+  context "on the jobs index page" do
+    before(:each ) do
       Region.create(place: "Wisconsin")
       Region.create(place: "Remote")
       Region.create(place: "Colorado")
