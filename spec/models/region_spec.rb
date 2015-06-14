@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Region, type: :model do
-  before(:each) do 
+  before(:each) do
     @region = Region.create(place: "Wisconsin")
     @company = Company.create(name: "HQ")
   end

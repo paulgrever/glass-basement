@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Job, type: :model do
-  before(:each) do 
+  before(:each) do
     @company = Company.create(name: "Company 1")
     @job = Job.create(title: "Title 1",
                       job_description: "Description",
