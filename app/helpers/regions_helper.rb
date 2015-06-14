@@ -1,5 +1,5 @@
 module RegionsHelper
-  def regions 
+  def regions
     @regions ||= Region.all
   end
 end

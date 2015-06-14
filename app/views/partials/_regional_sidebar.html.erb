@@ -1,9 +1,13 @@
-
-<div class="col s12 m4 l3 card-panel teal lighten-2">
+<div class="col s4 m4 l3 card-panel teal lighten-2">
   <h4>Regions:</h4>
-  <ul>
+  <ul class="collapsible" data-collapsible="accordion">
     <% regions.each do |region| %>
-    <li><%= region.place %></li>
+    <li> 
+      <div class="collapsible-header"><%= region.place %></div>
+          <% region.companies.each do |company|  %>
+           <div class="collapsible-body"><p> - <%=company.name  %> </p></div>
+          <% end %>
+    </li>
     <% end %>
   </ul>
 </div>
