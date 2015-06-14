@@ -6,8 +6,8 @@ RSpec.describe Job, type: :model do
     @job = Job.create(title: "Title 1",
                       job_description: "Description",
                       company_id: @company.id)
-
   end
+
   it "can create a job" do
     expect(@job.title).to eq("Title 1")
     expect(@job.job_description).to eq("Description")
