@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :jobs
   resources :regions
   resources :companies
+  resources :chats
 end

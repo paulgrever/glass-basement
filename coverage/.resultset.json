@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/controllers/companies_controller_spec.rb": [
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/controllers/chats_controller_spec.rb": [
         1,
         null,
         1,
@@ -32,8 +32,8 @@
         null,
         null,
         1,
-        12,
-        12,
+        14,
+        14,
         null,
         null,
         null
@@ -215,9 +215,14 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/helpers/chats_helper.rb": [
         1,
         null
       ],
@@ -240,8 +245,20 @@
         null,
         null
       ],
-      "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/controllers/companies_controller.rb": [
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/controllers/chats_controller.rb": [
         1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
         1,
         0,
         null,
@@ -253,6 +270,20 @@
         null,
         1,
         1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/controllers/companies_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/controllers/companies_controller.rb": [
+        1,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/controllers/jobs_controller_spec.rb": [
@@ -283,10 +314,26 @@
         null,
         null
       ],
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/features/chat_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/features/job_page_spec.rb": [
         1,
         null,
-        null,
         1,
         1,
         1,
@@ -321,6 +368,25 @@
         1,
         null,
         null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/models/chat_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/models/chat.rb": [
+        1,
+        1,
         null
       ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/models/company_spec.rb": [
@@ -384,6 +450,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/models/region_spec.rb": [
@@ -424,6 +491,6 @@
         null
       ]
     },
-    "timestamp": 1434347213
+    "timestamp": 1434401411
   }
 }
