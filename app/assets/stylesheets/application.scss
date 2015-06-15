@@ -2,6 +2,8 @@
 $primary-color: color("blue", "lighten-2") !default;
 @import "materialize";
 
+$mainText: #e8eaf6; 
+
 .wrapper {
   min-height: 70vh;
 }
@@ -9,4 +11,28 @@ $primary-color: color("blue", "lighten-2") !default;
 footer {
   height:100%;
   width: 100%;
+  margin-top: 0px;
+}
+
+.page-footer {
+  margin-top: 0px !important;
+}
+
+.sidebar {
+  padding-bottom: 0px;
+  min-height: 70vh;
+  
+}
+
+.main {
+  @extend  .text-lighten-4, .yellow-text;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0px;
+}
+
+.row {
+  margin-bottom: 0px;
 }
