@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "User", type: :feature do
-  context "on the jobs index page" do
+  context "on the jobs index page", js: true do
     before(:each ) do
       @region1 = Region.create(place: "Wisconsin")
       Region.create(place: "Remote")
@@ -16,14 +16,14 @@ RSpec.describe "User", type: :feature do
       expect(page).to have_content("Wisconsin")
     end
 
-    it "can view the businesses in the region", js: true  do
+    it "can view the businesses in the region"  do
       @region1.companies << @company1
       visit root_path
       first(".collapsible-header").click
       expect(page).to have_content("Econify")
     end
 
-    it "can view the company info", js: true do
+    it "can view the company info" do
       @region1.companies << @company1
       @company1.jobs << @job1
       visit root_path
