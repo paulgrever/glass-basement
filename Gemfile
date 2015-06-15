@@ -24,6 +24,7 @@ gem 'rspec-rails'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
+gem 'selenium-webdriver'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -39,6 +40,7 @@ group :development, :test do
   gem "capybara"
   gem "launchy"
   gem "pry"
+
 end
 
 group :test do

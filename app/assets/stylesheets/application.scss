@@ -1,0 +1,36 @@
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+@import "materialize";
+
+.wrapper {
+  min-height: 70vh;
+}
+
+footer {
+  height:100%;
+  width: 100%;
+  margin-top: 0;
+}
+
+.page-footer {
+  margin-top: 0 !important;
+}
+
+.sidebar {
+  padding-bottom: 0;
+  min-height: 70vh;
+  
+}
+
+.main {
+  @extend .text-lighten-4, .yellow-text;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.row {
+  margin-bottom: 0;
+}

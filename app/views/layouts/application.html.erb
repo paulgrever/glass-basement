@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="wrapper">
+    <div>
+      <%= render  'partials/navbar' %>
+    </div>
+    <div class="row">
+      <%= render  'partials/regional_sidebar' %>
 
-<%= yield %>
-
+      <%= yield %>
+    </div>
+  </div>
+  <%= render  'partials/footer' %>
 </body>
 </html>
