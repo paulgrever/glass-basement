@@ -9,6 +9,7 @@ RSpec.describe "User", type: :feature do
       Region.create(place: "Colorado")
       @company1= Company.create(name: "Econify")
       Company.create(name: "LivingSocial")
+      @job1 = Job.create(title: "Job1", job_description: "description1")
     end
 
     it "displays the region on the page" do
@@ -21,6 +22,17 @@ RSpec.describe "User", type: :feature do
       visit root_path
       first(".collapsible-header").click
       expect(page).to have_content("Econify")
+    end
+
+    it "can view the company info", js: true do
+      @region1.companies << @company1
+      @company1.jobs << @job1
+      visit root_path
+      first(".collapsible-header").click
+      click_link_or_button("Job1")
+      expect(page).to have_content("Econify")
+      expect(page).to have_content("Job1")
+
     end
   end
 end
