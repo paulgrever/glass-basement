@@ -2,12 +2,14 @@
   <h4>Regions:</h4>
   <ul class="collapsible" data-collapsible="accordion">
     <% regions.each do |region| %>
-    <li> 
-      <div class="collapsible-header"><%= region.place %></div>
+      <li> 
+        <div class="collapsible-header"><%= region.place %></div>
           <% region.companies.each do |company|  %>
-           <div class="collapsible-body"><p> - <%=company.name  %> </p></div>
+            <div class="collapsible-body">
+              <p><%=company.name  %></p>
+            </div>
           <% end %>
-    </li>
+      </li>
     <% end %>
   </ul>
 </div>
