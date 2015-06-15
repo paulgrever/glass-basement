@@ -32,8 +32,8 @@
         null,
         null,
         1,
-        12,
-        12,
+        13,
+        13,
         null,
         null,
         null
@@ -323,6 +323,25 @@
         null,
         null
       ],
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/models/chat_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/models/chat.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/models/company_spec.rb": [
         1,
         null,
@@ -384,6 +403,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/spec/models/region_spec.rb": [
@@ -424,6 +444,6 @@
         null
       ]
     },
-    "timestamp": 1434347213
+    "timestamp": 1434398808
   }
 }
