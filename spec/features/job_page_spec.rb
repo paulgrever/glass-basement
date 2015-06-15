@@ -32,7 +32,7 @@ RSpec.describe "User", type: :feature do
       click_link_or_button("Job1")
       expect(page).to have_content("Econify")
       expect(page).to have_content("Job1")
-
+      expect(current_path).to eq(job_path(@job1))
     end
   end
 end

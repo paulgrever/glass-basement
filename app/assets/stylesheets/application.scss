@@ -1,3 +1,12 @@
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-2") !default;
 @import "materialize";
+
+.wrapper {
+  min-height: 70vh;
+}
+
+footer {
+  height:100%;
+  width: 100%;
+}
