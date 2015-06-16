@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'figaro'
+gem 'omniauth-github'
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
