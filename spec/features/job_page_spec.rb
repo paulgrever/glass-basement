@@ -1,6 +1,5 @@
 require "rails_helper"
 
-
 RSpec.describe "User", type: :feature do
   context "on the jobs index page" do
     before(:each ) do

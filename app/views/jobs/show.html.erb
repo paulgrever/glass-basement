@@ -5,3 +5,21 @@
     <p class="center-align text-flow"><%= @job.job_description %> </p>
   </div>
 </div>
+<div class="row">
+  <div class="col sm6 m6 l6">
+    <div class="messages">
+      <% @job.chats.each do |chat| %>
+        <div>
+          <%= chat.body %>
+        </div>
+      <% end %>
+    </div>
+    <div id="chat-form">
+      <%= form_for(:chat, url: chats_path, method: :post, remote: true) do |f|  %>
+        <%= f.text_field :body, id:"chat-input" %>
+        <%= f.hidden_field :job_id, value: @job.id %>
+        <%= f.submit "Send", class:"red btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>
