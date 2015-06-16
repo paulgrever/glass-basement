@@ -28,12 +28,22 @@
         null,
         1,
         1,
-        1,
         null,
         null,
         1,
-        14,
-        14,
+        15,
+        null,
+        null,
+        1,
+        5,
+        null,
+        null,
+        1,
+        15,
+        null,
+        null,
+        1,
+        15,
         null,
         null,
         null
@@ -234,23 +244,23 @@
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/helpers/jobs_helper.rb": [
         1,
         1,
-        1,
+        3,
         null,
         null
       ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/helpers/regions_helper.rb": [
         1,
         1,
-        4,
+        7,
         null,
         null
       ],
       "/Users/paulgrever/Documents/rails_lessons/glass-basement/app/controllers/chats_controller.rb": [
         1,
         1,
-        0,
-        0,
-        0,
+        2,
+        2,
+        2,
         null,
         0,
         0,
@@ -260,7 +270,7 @@
         1,
         null,
         1,
-        0,
+        2,
         null,
         null
       ],
@@ -298,7 +308,7 @@
         null,
         null,
         1,
-        1,
+        3,
         null,
         null
       ],
@@ -320,6 +330,16 @@
         1,
         1,
         1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -327,6 +347,12 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null
@@ -491,6 +517,6 @@
         null
       ]
     },
-    "timestamp": 1434401411
+    "timestamp": 1434411463
   }
 }
