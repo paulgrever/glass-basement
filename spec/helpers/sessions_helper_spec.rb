@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe SessionsHelper, type: :helper do
   it "has a current user that works" do

@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe SessionsController, type: :controller do
   it "has a destroy that resets the user_id in the session" do
