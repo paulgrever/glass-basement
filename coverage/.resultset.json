@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/controllers/companies_controller_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/controllers/companies_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/rails_helper.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/rails_helper.rb": [
         1,
         1,
         1,
@@ -32,20 +32,20 @@
         null,
         null,
         1,
-        12,
-        12,
+        16,
+        16,
         null,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/environment.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/application.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/application.rb": [
         1,
         null,
         1,
@@ -82,12 +82,12 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/boot.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/environments/test.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/environments/test.rb": [
         1,
         null,
         null,
@@ -131,7 +131,7 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/assets.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -144,7 +144,7 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/backtrace_silencers.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -153,18 +153,18 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/cookies_serializer.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/filter_parameter_logging.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/inflections.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -182,23 +182,23 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/mime_types.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/omniauth.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/omniauth.rb": [
         1,
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/session_store.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/initializers/wrap_parameters.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -214,7 +214,7 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/config/routes.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/config/routes.rb": [
         1,
         1,
         1,
@@ -224,44 +224,44 @@
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/helpers/application_helper.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/helpers/companies_helper.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/helpers/companies_helper.rb": [
         1,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/helpers/jobs_helper.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/helpers/jobs_helper.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/helpers/regions_helper.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/helpers/regions_helper.rb": [
         1,
         1,
         4,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/helpers/sessions_helper.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/helpers/sessions_helper.rb": [
         1,
         1,
-        4,
+        5,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/controllers/companies_controller.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/controllers/companies_controller.rb": [
         1,
         1,
         0,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/controllers/application_controller.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -270,13 +270,13 @@
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/controllers/jobs_controller_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/controllers/jobs_controller_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/controllers/jobs_controller.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/controllers/jobs_controller.rb": [
         1,
         1,
         null,
@@ -286,26 +286,36 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/controllers/regions_controller_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/controllers/regions_controller_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/controllers/regions_controller.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/controllers/regions_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/controllers/sessions_controller_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/controllers/sessions_controller_spec.rb": [
         1,
         null,
         1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/controllers/sessions_controller.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/controllers/sessions_controller.rb": [
         1,
         1,
         0,
@@ -315,12 +325,12 @@
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/features/job_page_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/features/job_page_spec.rb": [
         1,
         null,
         null,
@@ -360,24 +370,18 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/helpers/sessions_helper_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/helpers/sessions_helper_spec.rb": [
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/models/company_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/models/company_spec.rb": [
         1,
         null,
         1,
@@ -395,7 +399,7 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/models/company.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/models/company.rb": [
         1,
         1,
         1,
@@ -403,7 +407,7 @@
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/models/job_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/models/job_spec.rb": [
         1,
         null,
         1,
@@ -434,13 +438,13 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/models/job.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/models/job.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/models/region_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/models/region_spec.rb": [
         1,
         null,
         1,
@@ -464,43 +468,46 @@
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/models/region.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/models/region.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/spec/models/user_spec.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
-        null
-      ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/models/user.rb": [
         1,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
         null,
         null
       ],
-      "/Users/VLS/Dev/turing/4module/glass-basement/app/models/company_region.rb": [
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/VLS/Dev/turing/4module/projects/glass-basement/app/models/company_region.rb": [
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1434413415
+    "timestamp": 1434482895
   }
 }
