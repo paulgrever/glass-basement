@@ -1,5 +1,3 @@
-require 'ostruct'
-
 class JobsController < ApplicationController
   include JobsHelper
 
