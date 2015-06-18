@@ -18,15 +18,12 @@ class JobsController < ApplicationController
     end
     if params[:job_form][:new_company].present?
       @company = Company.find_or_create_by(name: params[:job_form][:new_company])
-      binding.pry
       @company.regions << @region unless @company.regions.exists?(@region.id)
     else
       @company = Company.find_by(name: params[:job_form][:company])
       @company.regions << @region unless @company.regions.exists?(@region.id)
     end
-    
-    @job = @company.jobs.build(title: params[:job_form][:title],
-                   job_description: params[:job_form][:job_description])
+    @job = @company.jobs.build(job_params)
     if @job.save
       redirect_to job_path(@job)
     else
@@ -37,6 +34,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job_form).permit(:title, :job_description, :job_id)
+    params.require(:job_form).permit(:title, :job_description)
   end
 end
