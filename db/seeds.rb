@@ -12,10 +12,11 @@ class Seeds
     CompanyRegion.create(company_id: 2, region_id: 2)
     CompanyRegion.create(company_id: 3, region_id: 3)
 
-    Job.create(title: "Web Developer", job_description: "Build stuff", company_id: 1)
-    Job.create(title: "Web Developer", job_description: "Build stuff", company_id: 2)
-    Job.create(title: "Web Developer", job_description: "Build stuff", company_id: 3)
+    (1..6).to_a.each do |num|
+      Job.create(title: "Web Developer #{num}", job_description: "Build stuff", company_id: ((num % 3) + 1))
+    end
   end
 end
 
 Seeds.create
+puts "creating seeds"
