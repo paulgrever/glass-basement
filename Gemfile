@@ -15,6 +15,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
 gem 'selenium-webdriver'
 gem "socket.io-rails"
+gem 'redis-store'
 
 group :development, :test do
   gem "better_errors"
