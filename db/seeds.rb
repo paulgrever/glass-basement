@@ -17,7 +17,23 @@ class Seeds
     (1..6).to_a.each do |num|
       Job.create(title: "Web Developer #{num}", job_description: "Build stuff", company_id: ((num % 3) + 1))
     end
+
+    10.times do 
+      User.first.interviews.create(job_id: (1..6).to_a.sample,
+                                   title: "Interview #{rand(1..10)}",
+                                   number: rand(1..3),
+                                   date: Time.at(rand * Time.now.to_i),
+                                   interview_type: ["phone", "in-person", "technical", "video", "other"].sample,
+                                   details: "This interview was great. They were friendly and asked me alot about my passion for coding",
+                                   time_between: "1 week",
+                                   questions: "They focused alot of their questions about TDD and JavaScript",
+                                   interviewer_name: "Miriam Moser", 
+                                   interviewer_email: "miriam.moser@gmail.com",
+                                   interviewer_phone: "555-555-5555")
+    end
   end
+
+
 end
 
 Seeds.create
