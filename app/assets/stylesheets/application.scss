@@ -1,9 +1,15 @@
 @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
+$primary-color: #455a64 !default;
 @import "materialize";
+
+$button-back: #FFC107;
 
 .wrapper {
   min-height: 70vh;
+}
+
+body, .body-back {
+  background-color: #B6B6B6;
 }
 
 .main-section {
@@ -15,7 +21,9 @@ $primary-color: color("blue", "lighten-2") !default;
 .interview-button {
   width: 100%;
 }
-
+.button-back {
+  background-color: $button-back;
+}
 footer {
   height:100%;
   width: 100%;

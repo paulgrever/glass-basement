@@ -1,6 +1,11 @@
 require "rails_helper"
+require 'selenium-webdriver'
 
 RSpec.describe "Chat", type: :feature do
+  before '@javascript' do
+    window = Capybara.current_session.driver.browser.manage.window
+    window.resize_to(1024, 768) # width, height
+  end
   context "posting a chat", js: true do
     before(:each ) do
       @company = Company.create(name: "Company 1")

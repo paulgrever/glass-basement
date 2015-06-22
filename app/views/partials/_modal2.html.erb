@@ -1,5 +1,5 @@
- <div id="modal2" class="modal modal-fixed-footer">
-    <div class="modal-content">
+ <div id="modal2" class="modal modal-fixed-footer body-back">
+    <div class="modal-content ">
       <h4>Add an Interview for <%=@job.company.name  %>'s <%= @job.title %></h4>
           <% if current_user.present? %>
             <div id="interview-form">
@@ -7,6 +7,9 @@
               <%= f.text_field :title, placeholder:"Interview Title" %>
               <%= f.label "What was the date of the interview" %>
               <%=   f.date_field(:date, class:"datepicker", placeholder:"Select Date of Interview", id:"date-pick")%>
+              <%= f.label "How many interviews have you had with #{@job.company.name}?"%>
+              <%= f.select :number, [1, 2, 3, 4],  class:"browser-default" %>
+              <br>
               <%= f.label "How was the interview set up?"%>
               <%= f.select :interview_type, ["phone", "in-person", "technical", "video", "other"], class:"browser-default" %>
               <p></p>
@@ -24,17 +27,17 @@
               <%=f.text_field :interviewer_email, placeholder: "Interviewer Email Address" %>
               <%=f.text_field :interviewer_phone, placeholder: "Interviewer Phone Number" %>
               <div class="center-align">
-              <%= f.submit "Send", class:"red btn" %>
+              <%= f.submit "Send", class:"btn-large amber" %>
               </div>
             <% end %>
         </div>
         <% else %>
-          <div>
-            <div class="card-panel  red accent-2 valign-wrapper">
+          <div class="body-back">
+            <div class="card-panel  blue-grey lighten-4 valign-wrapper">
               <h2 class="center-align">You must be logged in to post an interview.</h2>
             </div>
             <div class="center-align">
-              <a class="btn-large teal" href="/auth/github">Login</a>
+              <a class="btn-large amber" href="/auth/github">Login</a>
             </div>
           </div>
         <% end %>

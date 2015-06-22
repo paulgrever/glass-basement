@@ -1,7 +1,7 @@
 <% @job.interviews.each do |interview| %>
   <div class="">
       <div class="card">
-        <div class="card-content card-medium yellow lighten-3">
+        <div class="card-content card-medium blue-grey lighten-4">
           <span class="card-title activator grey-text text-darken-4"> <%= interview.title %> <i class="mdi-navigation-more-vert right icon-button"></i></span>
           <p>This was inteview number <strong><%= interview.number %></strong> with <%= @job.company.name%></p>
           <p>Interview Date: <strong><%=interview.date.strftime("%B %d, %Y")  %></strong></p>
@@ -20,10 +20,10 @@
             </div>
           </div>
         </div>
-        <div class="card-reveal deep-purple lighten-4">
-          <span class="card-title grey-text text-darken-4 ">Interview Details <i class="mdi-navigation-close right"></i></span>
+        <div class="card-reveal white-text blue-grey darken-2">
+          <span class="card-title white-text ">Interview Details <i class="mdi-navigation-close right"></i></span>
           <p>Questions: <%= interview.questions %></p>
-          <span class="card-title grey-text text-darken-4">Interviewer Contact Information</span>
+          <span class="card-title white-text">Interviewer Contact Information</span>
           <p>Name: <%= interview.interviewer_name %></p>
           <p>Email: <%= interview.interviewer_email %></p>
           <p>Phone: <%= interview.interviewer_phone %></p>

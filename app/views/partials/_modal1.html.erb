@@ -1,5 +1,5 @@
 <div id="modal1" class="modal modal-fixed-footer">
-  <div class="modal-content">
+  <div class="modal-content body-back">
     <h4>Post a New Job</h4>
     <div id="job-form">
       <%= form_for(:job_form, url: jobs_path, method: :post) do |f|  %>
@@ -13,7 +13,7 @@
         <%= f.text_field :new_region, id:"job-region", placeholder:"New Region" %>
         <%= f.select :region, regions_name, class:"browser-default region-select" %>
         <div class="center-align">
-        <%= f.submit "Send", class:"red btn" %>
+        <%= f.submit "Send", class:"amber btn" %>
         </div>
       <% end %>
   </div>

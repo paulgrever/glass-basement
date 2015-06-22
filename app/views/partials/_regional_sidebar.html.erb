@@ -1,4 +1,4 @@
-<div class="col s4 m4 l3 card-panel teal lighten-2 sidebar">
+<div class="col s4 m4 l3 card-panel blue-grey lighten-4 sidebar">
   <h5>Regions:</h5>
   <ul class="collapsible" data-collapsible="accordion">
     <% regions.each do |region| %>
@@ -8,9 +8,9 @@
         </div>
         <% region.companies.each do |company|  %>
           <div class="collapsible-body center-align">
-            <h5 class="amber-text accent-2"><%= company.name %></h5>
+            <h5 class=" blue-grey-text darken-2-text"><%= company.name %></h5>
               <% company.jobs.each do |job| %>
-                <%= link_to(job.title, job_path(job), class:"red btn-flat") %>
+                <%= link_to(job.title, job_path(job), class:"amber btn-flat") %>
               <% end %>
           </div>
         <% end %>
@@ -19,7 +19,7 @@
   </ul>
   <div class="bottom">
       <!-- Modal Trigger -->
-      <a class="btn-floating btn-large waves-effect waves-light modal-trigger red" id="plus-button" href="#modal1"><i class="mdi-content-add"></i>Plus</a>
+      <a class="btn-floating btn-large waves-effect waves-light modal-trigger amber" id="plus-button" href="#modal1"><i class="mdi-content-add"></i>Plus</a>
 
   <!-- Modal Structure -->
   </div>
