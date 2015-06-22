@@ -17,7 +17,7 @@
     <div id="chat-form">
       <%= form_for(:chat, url: chats_path, method: :post, remote: true) do |f|  %>
         <%= f.text_field :body, id:"chat-input" %>
-        <%= f.hidden_field :job_id, value: @job.id %>
+        <%= f.hidden_field :job_id, value: @job.id, id: "job-id" %>
         <%= f.submit "Send", class:"red btn" %>
       <% end %>
     </div>
