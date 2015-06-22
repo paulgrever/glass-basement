@@ -1,0 +1,45 @@
+ <div id="modal2" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Add an Interview for <%=@job.company.name  %>'s <%= @job.title %></h4>
+          <% if current_user.present? %>
+            <div id="interview-form">
+            <%= form_for(:interview_form, url: interviews_path, method: :post) do |f|  %>
+              <%= f.text_field :title, placeholder:"Interview Title" %>
+              <%= f.label "What was the date of the interview" %>
+              <%=   f.date_field(:date, class:"datepicker", placeholder:"Select Date of Interview", id:"date-pick")%>
+              <%= f.label "How was the interview set up?"%>
+              <%= f.select :interview_type, ["phone", "in-person", "technical", "video", "other"], class:"browser-default" %>
+              <p></p>
+              <%= f.label "How long since your last interview/submission?"%>
+              <%= f.select :time_between, ["less than a day", "less than two days", "within a week", "within two weeks", "within a month", "greater than a month"], placeholder:"Interview",  class:"browser-default" %>
+              <br>
+              <%= f.label "Please provide details about the interview, what did they focus on? What were the major themes of the interview?"%>
+              <%= f.text_area :details, class:"materialize-textarea", placeholder:"Interview Details"  %>
+              <%= f.hidden_field :job_id, value: @job.id %>
+              <%= f.hidden_field :user_id, value: current_user.id %>
+              <%= f.label "Please provide specific questions they asked you in the interview. Example: 'Can you explain MVC?'"%>
+              <%= f.text_area :questions, class:"materialize-textarea", placeholder:"Interview Questions"   %>
+              <h5>Interviewer Contact Info</h5>
+              <%=f.text_field :interviewer_name, placeholder: "Interviewer Name" %>
+              <%=f.text_field :interviewer_email, placeholder: "Interviewer Email Address" %>
+              <%=f.text_field :interviewer_phone, placeholder: "Interviewer Phone Number" %>
+              <div class="center-align">
+              <%= f.submit "Send", class:"red btn" %>
+              </div>
+            <% end %>
+        </div>
+        <% else %>
+          <div>
+            <div class="card-panel  red accent-2 valign-wrapper">
+              <h2 class="center-align">You must be logged in to post an interview.</h2>
+            </div>
+            <div class="center-align">
+              <a class="btn-large teal" href="/auth/github">Login</a>
+            </div>
+          </div>
+        <% end %>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="close-interview">Close</a>
+    </div>
+  </div>

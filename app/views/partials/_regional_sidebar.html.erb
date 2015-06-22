@@ -24,30 +24,6 @@
   <!-- Modal Structure -->
   </div>
 </div>
+<%= render "partials/modal1" %>
 
-  <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Post a New Job</h4>
-      <div id="job-form">
-        <%= form_for(:job_form, url: jobs_path, method: :post) do |f|  %>
-          <%= f.text_field :title, id:"job-title", placeholder:"Job Title" %>
-          <%= f.text_area :job_description, id:"job-description", class:"materialize-textarea", placeholder:"Job Description"  %>
-          <%= f.label "Create a new company or select an exisitng one"%>
-          <%= f.text_field :new_company, id:"job-company", placeholder:"New Company"  %>
-          <%= f.select :company, companies_name, class:"browser-default company-select" %>
-          <p></p>
-          <%= f.label "Create a new region or select an exisitng one"%>
-          <%= f.text_field :new_region, id:"job-region", placeholder:"New Region" %>
-          <%= f.select :region, regions_name, class:"browser-default region-select" %>
-          <div class="center-align">
-          <%= f.submit "Send", class:"red btn" %>
-          </div>
-        <% end %>
-    </div>
-      
-    </div>
-    <div class="modal-footer">
-      <button class="modal-action modal-close waves-effect waves-green btn-flat ">Close</button>
-    </div>
-  </div>
           

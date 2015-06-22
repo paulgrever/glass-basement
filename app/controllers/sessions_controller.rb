@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def create
     req = request.env["omniauth.auth"]
+    binding.pry
     @user = User.find_or_create_by_auth(req)
     session[:user_id] = @user.id
     redirect_to root_path, notice: "Logged in as #{@user.name}"

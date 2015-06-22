@@ -10,17 +10,12 @@ RSpec.describe "Create Job", type: :feature do
       @company1.jobs << @job1
     end
 
-    it "can create a new job from root with new company and new region"do
-      visit root_path
-      within(".bottom") do
-        click_link_or_button("Plus")
-      end
-      fill_in("job_form[title]", with: "New Job")
-      fill_in("job_form[job_description]", with: "New Description")
-      fill_in("job_form[new_company]", with: "New Company")
-      fill_in("job_form[new_region]", with: "New Region")
-      click_link_or_button("Send")
-      expect(page).to have_content("New Company")
+    it "it can create a new interview"do
+      github_login
+      visit job_path(@job1)
+      click_link_or_button(" Add an Interview")
+      fill_in("interview_form[title]", with: "Interview 1")
+      
     end
   end
 end
