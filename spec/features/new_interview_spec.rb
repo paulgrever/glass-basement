@@ -20,14 +20,13 @@ RSpec.describe "Create Job", type: :feature do
       click_link_or_button("Add an Interview")
       find("#date-pick").click
       click_link_or_button("Today")
-      # fill_in("interview_form[date]", with: "17 June, 2015")
       fill_in("interview_form[title]", with: "Interview 1")
-      fill_in("interview_form[details]", with: "Details" )
-      fill_in("interview_form[questions]", with: "Question 1" )
-      fill_in("interview_form[interviewer_name]", with: "Name" )
-      fill_in("interview_form[interviewer_email]", with: "Email@email.com" )
-      fill_in("interview_form[interviewer_phone]", with: "555-555-5555" )
-      within("#interview-form") do 
+      fill_in("interview_form[details]", with: "Details")
+      fill_in("interview_form[questions]", with: "Question 1")
+      fill_in("interview_form[interviewer_name]", with: "Name")
+      fill_in("interview_form[interviewer_email]", with: "Email@email.com")
+      fill_in("interview_form[interviewer_phone]", with: "555-555-5555")
+      within("#interview-form") do
         click_link_or_button("Send")
       end
       expect(page).to have_content("Interview 1")

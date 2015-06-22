@@ -8,12 +8,12 @@ class InterviewsController < ApplicationController
     end
   end
 
-   private
+  private
 
   def interview_params
     params.require(:interview_form).permit(:title,
                                            :job_id,
-                                           :number, 
+                                           :number,
                                            :interview_type,
                                            :details,
                                            :date,
