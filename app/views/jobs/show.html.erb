@@ -6,7 +6,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col sm6 m6 l6">
+  <div class="col sm4 m4 l4">
     <div class="messages">
       <% @job.chats.each do |chat| %>
         <div>
@@ -22,4 +22,7 @@
       <% end %>
     </div>
   </div>
+  <div class="col s5 m5 l5">
+    <%= render 'partials/interview' %>
+    </div>
 </div>
