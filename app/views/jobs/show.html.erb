@@ -1,4 +1,4 @@
-<div class="col s8 m8 l9 card-panel red lighten-2">
+<div class="col s8 m8 l9 card-panel  blue-grey">
   <div>
     <h3 class="center-align "><%= company %></h3>
     <h4 class="center-align" ><%= @job.title %> </h4>
@@ -18,11 +18,15 @@
       <%= form_for(:chat, url: chats_path, method: :post, remote: true) do |f|  %>
         <%= f.text_field :body, id:"chat-input" %>
         <%= f.hidden_field :job_id, value: @job.id %>
-        <%= f.submit "Send", class:"red btn" %>
+        <%= f.submit "Send", class:"amber btn" %>
       <% end %>
     </div>
   </div>
-  <div class="col s5 m5 l5">
-    <%= render 'partials/interview' %>
+  <div class="col s5 m5 l5 main-section ">
+    <a class="waves-effect waves-light btn amber interview-button modal-trigger" href="#modal2"><i class="mdi-content-add-circle-outline"> Add an Interview</i> </a>
+
+    <%= render "partials/interview" %>
     </div>
 </div>
+  <%= render "partials/modal2" %>
+ 

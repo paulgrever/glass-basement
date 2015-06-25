@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/auth/github/callback", to: "sessions#create"
   get "/logout", to: "sessions#destroy"
   resources :chats, only: [:create]
+  resources :interviews, only: [:create]
 end

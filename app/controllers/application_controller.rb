@@ -5,4 +5,8 @@ class ApplicationController < ActionController::Base
   include RegionsHelper
   include SessionsHelper
   include CompaniesHelper
+
+  def types_of_interview
+    ["phone", "in-person", "technical", "video", "other"]
+  end
 end
