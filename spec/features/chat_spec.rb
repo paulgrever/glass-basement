@@ -10,12 +10,13 @@ RSpec.describe "Chat", type: :feature do
       @company1.jobs << @job1
     end
 
-    it "can chat"do
+    xit "can chat"do
       visit root_path
       first(".collapsible-header").click
       click_link_or_button("Job1")
       fill_in("chat[body]", with: "Hello")
       click_link_or_button("Send")
+      save_and_open_page
       expect(page).to have_content("Hello")
     end
 

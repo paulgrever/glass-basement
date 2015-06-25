@@ -5,6 +5,7 @@
       <%= form_for(:job_form, url: jobs_path, method: :post) do |f|  %>
         <%= f.text_field :title, id:"job-title", placeholder:"Job Title" %>
         <%= f.text_area :job_description, id:"job-description", class:"materialize-textarea", placeholder:"Job Description"  %>
+        <br>
         <%= f.label "Create a new company or select an exisitng one"%>
         <%= f.text_field :new_company, id:"job-company", placeholder:"New Company"  %>
         <%= f.select :company, companies_name, class:"browser-default company-select" %>
