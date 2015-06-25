@@ -23,20 +23,22 @@ class Seeds
       CompanyRegion.create(company_id: (index + 1), region_id: a.id)
     end
 
-    User.create(uid: "123455", name: "Paul Grever", email: "paulgrever@gmail.com", image: "https://avatars.githubusercontent.com/u/3664281?v=3")
+    user = User.create(uid: "123455", name: "Paul Grever", email: "paulgrever@gmail.com", image: "https://avatars.githubusercontent.com/u/3664281?v=3")
+    job_ids = (1..Job.count).to_a
 
-    Job.count.times do |i|
-      User.first.interviews.create(job_id: Job.find(i + 1),
-                                   title: "Interview #{rand(1..10)}",
-                                   number: rand(1..3),
-                                   date: Time.at(rand * Time.now.to_i),
-                                   interview_type: ["phone", "in-person", "technical", "video", "other"].sample,
-                                   details: "This interview was great. They were friendly and asked me alot about my passion for coding",
-                                   time_between: "1 week",
-                                   questions: "They focused alot of their questions about TDD and JavaScript",
-                                   interviewer_name: "Miriam Moser",
-                                   interviewer_email: "miriam.moser@gmail.com",
-                                   interviewer_phone: "555-555-5555")
+    Job.count.times do
+      Interview.create(job_id: job_ids.sample,
+       title: "Interview #{rand(1..10)}",
+       number: rand(1..3),
+       date: Time.at(rand * Time.now.to_i),
+       interview_type: ["phone", "in-person", "technical", "video", "other"].sample,
+       details: "This interview was great. They were friendly and asked me alot about my passion for coding",
+       time_between: "1 week",
+       questions: "They focused alot of their questions about TDD and JavaScript",
+       interviewer_name: "Miriam Moser",
+       interviewer_email: "miriam.moser@gmail.com",
+       interviewer_phone: "555-555-5555",
+       user_id: user.id)
     end
   end
 end
