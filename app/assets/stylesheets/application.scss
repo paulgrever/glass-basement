@@ -8,13 +8,27 @@ $button-back: #FFC107;
   min-height: 70vh;
 }
 
-body, .body-back {
+body {
   background-color: #B6B6B6;
 }
+
+.small {
+  font-size: 8px;
+  color: #ffffff;
+}
+
+.body-back {
+  background-color: #ffffff;
+} 
 
 .main-section {
   padding-bottom: 1px;
   height: 65vh;
+  overflow: scroll;
+}
+.main-section2 {
+  padding-bottom: 1px;
+  height: 53vh;
   overflow: scroll;
 }
 
@@ -30,13 +44,42 @@ footer {
   margin-top: 0;
 }
 
+.brand-logo {
+  margin-left: 10px;
+}
+
+.hero-unit {
+  margin-top: 1vh;
+  background-image: image-url("pairing.png");
+  background-size: cover;
+  height: 87vh;
+  z-index: -1;
+}
+
 .page-footer {
   margin-top: 0 !important;
 }
 
+.spacer {
+  padding-top: 10vh;
+  height: 60vh;
+}
+
 .sidebar {
-  min-height: 87vh;
-  height: 100%;
+  height: 87vh;
+  overflow: scroll;
+}
+
+.padder {
+  padding-top: 5vh;
+}
+
+.main-image {
+  padding-top: 12vh
+}
+
+.new-job {
+  margin-bottom: 10px;
 }
 
 

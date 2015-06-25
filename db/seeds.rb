@@ -18,12 +18,15 @@ class Seeds
       "Chicago", "Minneapolis", "Los Angeles", "San Diego", "Madison",
       "Washington D.C."]
 
+    User.create(uid: "123455", name: "Paul Grever", email: "paulgrever@gmail.com", image: "https://avatars.githubusercontent.com/u/3664281?v=3")
+    User.create(uid:"8762410", name: "xvalentino", email: "tino@tino.tino", image: "https://avatars.githubusercontent.com/u/8762410?v=3")
+    User.create(uid:"5142805", name: "mirjoy", email: "miraim@miraim.miraim", image: "https://avatars.githubusercontent.com/u/5142805?v=3")
+
     cities.each_with_index do |city, index|
       a = Region.create(place: city)
       CompanyRegion.create(company_id: (index + 1), region_id: a.id)
     end
 
-    user = User.create(uid: "123455", name: "Paul Grever", email: "paulgrever@gmail.com", image: "https://avatars.githubusercontent.com/u/3664281?v=3")
     job_ids = (1..Job.count).to_a
 
     Job.count.times do
@@ -38,7 +41,7 @@ class Seeds
        interviewer_name: "Miriam Moser",
        interviewer_email: "miriam.moser@gmail.com",
        interviewer_phone: "555-555-5555",
-       user_id: user.id)
+       user_id: ([1,2,3].sample))
     end
   end
 end

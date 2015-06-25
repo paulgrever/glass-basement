@@ -1,4 +1,4 @@
-<div class="col s8 m8 l9 card-panel  blue-grey">
+<div class="col s8 m8 l9 card-panel blue-grey">
   <div>
     <h3 class="center-align "><%= company %></h3>
     <h4 class="center-align" ><%= @job.title %> </h4>
@@ -7,25 +7,51 @@
 </div>
 <div class="row">
   <div class="col sm4 m4 l4">
-    <div class="messages">
+    <div class="messages main-section2">
       <% @job.chats.each do |chat| %>
-        <div>
-          <%= chat.body %>
+        <div class="col s12 m12 l12">
+            <div class="row valign-wrapper section">
+              <div class="col s2">
+                <%= image_tag(chat.user.image, class: "circle responsive-img") %>
+              </div>
+              <div class="col s10">
+                <span class="black-text">
+                 <strong>[<%= chat.user.name %>]: </strong><%= chat.body %>
+                </span>
+              </div>
+            </div>
+            <div class="divider"></div>
+
         </div>
       <% end %>
     </div>
-    <div id="chat-form">
-      <%= form_for(:chat, url: chats_path, method: :post, remote: true) do |f|  %>
-        <%= f.text_field :body, id:"chat-input" %>
-        <%= f.hidden_field :job_id, value: @job.id, id: "job-id" %>
-        <%= f.submit "Send", class:"amber btn" %>
-      <% end %>
+    <div class="chat">
+      <%if current_user.present?  %>
+        <div  id="chat-form">
+          <%= form_for(:chat, url: chats_path, method: :post, remote: true) do |f|  %>
+            <%= f.text_field :body, id:"chat-input", length:"90" %>
+            <%= f.hidden_field :job_id, value: @job.id, id: "job-id" %>
+            <% if current_user %>
+            <%= f.hidden_field :user_id, value: current_user.id  %>
+            <% end %>
+            <%= f.submit "Send", class:"amber btn send" %>
+          <% end %>
+        </div>
+        <% else %>
+        <div class="center-align">
+          <p> Please login to start chatting.</p>
+          <a class="btn btn-small  blue-grey darken-2" href="/auth/github">Login</a>
+        </div>
+        <% end %>
     </div>
   </div>
   <div class="col s5 m5 l5 main-section ">
     <a class="waves-effect waves-light btn amber interview-button modal-trigger" href="#modal2"><i class="mdi-content-add-circle-outline"> Add an Interview</i> </a>
-
-    <%= render "partials/interview" %>
+    <% if @job.interviews.any? %>
+      <%= render "partials/interview" %>
+    <% else %>
+      <%= render "partials/no_interview" %>
+    <% end %>
     </div>
 </div>
   <%= render "partials/modal2" %>
