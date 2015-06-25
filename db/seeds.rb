@@ -1,25 +1,32 @@
 class Seeds
   def self.create
-    Region.create(place: "Denver")
-    Region.create(place: "Boston")
-    Region.create(place: "San Francisco")
 
-    Company.create(name: "QuickLeft")
-    Company.create(name: "Thoughtbot")
-    Company.create(name: "Pivotal Labs")
+    companies = ["QuickLeft", "Thoughtbot", "Pivotal Labs", "Sphero",
+      "Rally", "AlchemyAPI", "IBM", "CartaSite", "Get Outfitted",
+      "Project Helping", "Project Travel", "Kapost", "Sovrn", "Invoca",
+      "CaptainU", "MojoTech", "Dojo4", "Twitter", "Gnip", "Craftsy"]
 
-    CompanyRegion.create(company_id: 1, region_id: 1)
-    CompanyRegion.create(company_id: 2, region_id: 2)
-    CompanyRegion.create(company_id: 3, region_id: 3)
+    companies.each_with_index do |company|
+      a = Company.create(name: company)
+      Job.create(title: "Web Developer 1", job_description: "Build stuff", company_id: a.id)
+      Job.create(title: "Sr Web Developer", job_description: "Build stuff", company_id: a.id)
+    end
+
+    cities = ["Denver", "Boston", "San Francisco", "New York",
+      "Philadelphia", "St. Louis", "Salt Lake City", "Boulder",
+      "Fort Collins", "Miami", "Austin", "Dallas", "Providence",
+      "Chicago", "Minneapolis", "Los Angeles", "San Diego", "Madison",
+      "Washington D.C."]
+
+    cities.each_with_index do |city, index|
+      a = Region.create(place: city)
+      CompanyRegion.create(company_id: (index + 1), region_id: a.id)
+    end
 
     User.create(uid: "123455", name: "Paul Grever", email: "paulgrever@gmail.com", image: "https://avatars.githubusercontent.com/u/3664281?v=3")
 
-    (1..6).to_a.each do |num|
-      Job.create(title: "Web Developer #{num}", job_description: "Build stuff", company_id: ((num % 3) + 1))
-    end
-
-    10.times do
-      User.first.interviews.create(job_id: (1..6).to_a.sample,
+    Job.count.times do |i|
+      User.first.interviews.create(job_id: Job.find(i + 1),
                                    title: "Interview #{rand(1..10)}",
                                    number: rand(1..3),
                                    date: Time.at(rand * Time.now.to_i),
