@@ -1,11 +1,29 @@
 @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
+$primary-color: #455a64 !default;
 @import "materialize";
+
+$button-back: #FFC107;
 
 .wrapper {
   min-height: 70vh;
 }
 
+body, .body-back {
+  background-color: #B6B6B6;
+}
+
+.main-section {
+  padding-bottom: 1px;
+  height: 65vh;
+  overflow: scroll;
+}
+
+.interview-button {
+  width: 100%;
+}
+.button-back {
+  background-color: $button-back;
+}
 footer {
   height:100%;
   width: 100%;
@@ -17,18 +35,18 @@ footer {
 }
 
 .sidebar {
-  padding-bottom: 0;
-  min-height: 70vh;
-  
+  min-height: 87vh;
+  height: 100%;
 }
+
 
 .main {
   @extend .text-lighten-4, .yellow-text;
 }
 
 .bottom {
-  position: absolute;
-  bottom: 0;
+  float: right;
+  top: 250px;
 }
 
 .row {

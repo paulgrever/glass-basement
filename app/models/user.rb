@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :interviews
   def self.find_or_create_by_auth(auth_data)
     user = find_or_create_by_uid(auth_data["uid"])
     user.name = auth_data["info"]["name"]

@@ -4,4 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include RegionsHelper
   include SessionsHelper
+  include CompaniesHelper
+
+  def types_of_interview
+    ["phone", "in-person", "technical", "video", "other"]
+  end
 end

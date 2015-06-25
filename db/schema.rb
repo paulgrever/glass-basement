@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150615233013) do
+ActiveRecord::Schema.define(version: 20150621183619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,23 @@ ActiveRecord::Schema.define(version: 20150615233013) do
     t.integer  "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "interviews", force: :cascade do |t|
+    t.integer  "job_id"
+    t.string   "title"
+    t.integer  "number"
+    t.string   "interview_type"
+    t.string   "details"
+    t.date     "date"
+    t.string   "time_between"
+    t.string   "questions"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "interviewer_name"
+    t.string   "interviewer_email"
+    t.string   "interviewer_phone"
+    t.integer  "user_id"
   end
 
   create_table "jobs", force: :cascade do |t|
