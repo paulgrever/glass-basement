@@ -26,15 +26,24 @@
         </div>
       <% end %>
     </div>
-    <div  id="chat-form">
-      <%= form_for(:chat, url: chats_path, method: :post, remote: true) do |f|  %>
-        <%= f.text_field :body, id:"chat-input", length:"90" %>
-        <%= f.hidden_field :job_id, value: @job.id, id: "job-id" %>
-        <% if current_user %>
-        <%= f.hidden_field :user_id, value: current_user.id  %>
+    <div class="chat">
+      <%if current_user.present?  %>
+        <div  id="chat-form">
+          <%= form_for(:chat, url: chats_path, method: :post, remote: true) do |f|  %>
+            <%= f.text_field :body, id:"chat-input", length:"90" %>
+            <%= f.hidden_field :job_id, value: @job.id, id: "job-id" %>
+            <% if current_user %>
+            <%= f.hidden_field :user_id, value: current_user.id  %>
+            <% end %>
+            <%= f.submit "Send", class:"amber btn send" %>
+          <% end %>
+        </div>
+        <% else %>
+        <div class="center-align">
+          <p> Please login to start chatting.</p>
+          <a class="btn btn-small  blue-grey darken-2" href="/auth/github">Login</a>
+        </div>
         <% end %>
-        <%= f.submit "Send", class:"amber btn send" %>
-      <% end %>
     </div>
   </div>
   <div class="col s5 m5 l5 main-section ">
