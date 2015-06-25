@@ -13,13 +13,17 @@ class Seeds
     CompanyRegion.create(company_id: 3, region_id: 3)
 
     User.create(uid: "123455", name: "Paul Grever", email: "paulgrever@gmail.com", image: "https://avatars.githubusercontent.com/u/3664281?v=3")
+    User.create(uid:"8762410", name: "xvalentino", email: "tino@tino.tino", image: "https://avatars.githubusercontent.com/u/8762410?v=3")
+    User.create(uid:"5142805", name: "mirjoy", email: "miraim@miraim.miraim", image: "https://avatars.githubusercontent.com/u/5142805?v=3")
 
     (1..6).to_a.each do |num|
       Job.create(title: "Web Developer #{num}", job_description: "Build stuff", company_id: ((num % 3) + 1))
     end
 
-    10.times do
-      User.first.interviews.create(job_id: (1..6).to_a.sample,
+    15.times do
+      num = (1..User.all.count).to_a.sample
+      user = User.find(num)
+      user.interviews.create(job_id: (1..6).to_a.sample,
                                    title: "Interview #{rand(1..10)}",
                                    number: rand(1..3),
                                    date: Time.at(rand * Time.now.to_i),
