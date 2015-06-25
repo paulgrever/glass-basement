@@ -2,7 +2,7 @@ class ChatsController < ApplicationController
   def create
     @chat = Chat.new(chat_params)
     if @chat.save
-      $redis.publish("channel", {chat: @chat, user: @chat.user}.to_json)
+      $redis.publish("channel", { chat: @chat, user: @chat.user }.to_json)
       render json: @chat
     else
       flash[:error] = "Invalid Message"

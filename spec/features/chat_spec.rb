@@ -16,7 +16,6 @@ RSpec.describe "Chat", type: :feature do
       click_link_or_button("Job1")
       fill_in("chat[body]", with: "Hello")
       click_link_or_button("Send")
-      save_and_open_page
       expect(page).to have_content("Hello")
     end
 
