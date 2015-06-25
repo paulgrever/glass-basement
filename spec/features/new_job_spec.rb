@@ -11,7 +11,9 @@ RSpec.describe "Create Job", type: :feature do
     end
 
     xit "can create a new job from root with new company and new region"do
+      github_login
       visit root_path
+      click_link_or_button("Login")
       within(".bottom") do
         click_link_or_button("Plus")
       end
