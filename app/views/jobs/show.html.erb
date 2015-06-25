@@ -1,4 +1,4 @@
-<div class="col s8 m8 l9 card-panel  blue-grey">
+<div class="col s8 m8 l9 card-panel blue-grey">
   <div>
     <h3 class="center-align "><%= company %></h3>
     <h4 class="center-align" ><%= @job.title %> </h4>
@@ -19,7 +19,6 @@
                  <strong>[<%= chat.user.name %>]: </strong><%= chat.body %>
                 </span>
               </div>
-     
             </div>
             <div class="divider"></div>
 
@@ -48,8 +47,11 @@
   </div>
   <div class="col s5 m5 l5 main-section ">
     <a class="waves-effect waves-light btn amber interview-button modal-trigger" href="#modal2"><i class="mdi-content-add-circle-outline"> Add an Interview</i> </a>
-
-    <%= render "partials/interview" %>
+    <% if @job.interviews.any? %>
+      <%= render "partials/interview" %>
+    <% else %>
+      <%= render "partials/no_interview" %>
+    <% end %>
     </div>
 </div>
   <%= render "partials/modal2" %>

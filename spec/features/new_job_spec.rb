@@ -10,7 +10,7 @@ RSpec.describe "Create Job", type: :feature do
       @company1.jobs << @job1
     end
 
-    xit "can create a new job from root with new company and new region"do
+    it "can create a new job from root with new company and new region"do
       github_login
       visit root_path
       click_link_or_button("Login")

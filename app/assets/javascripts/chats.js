@@ -5,14 +5,12 @@ $(document).ready(function(){
   socket.on('message', function(message) {
     var data = $.parseJSON(message);
     appendMessage(data.chat.body, data.user.image, data.user.name);
-    scrollBottom();
+    $(".messages").scrollTop($(".messages")[0].scrollHeight);
   });
-  scrollBottom();
-
 });
 
 var appendMessage = function(message, image, name) {
-  $(".messages").append("<div class='col s12 m12 l12'>" + 
+  $(".messages").append("<div class='col s12 m12 l12'>" +
                           "<div class='row valign-wrapper section'>" +
                             "<div class='col s2'>" +
                               "<img src=" + image + " alt='' class='circle responsive-img'>" +
@@ -23,12 +21,8 @@ var appendMessage = function(message, image, name) {
                             "</div>" +
                           "</div>" +
                           "<div class='divider'></div>" +
-                        "</div>" 
-
+                        "</div>"
     );
   return $("#chat-input" ).val("");
-}
-
-var scrollBottom = function(){
- $(".messages").scrollTop($(".messages")[0].scrollHeight);
 };
+
