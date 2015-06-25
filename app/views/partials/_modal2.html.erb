@@ -4,9 +4,9 @@
           <% if current_user.present? %>
             <div id="interview-form">
             <%= form_for(:interview_form, url: interviews_path, method: :post) do |f|  %>
-              <%= f.text_field :title, placeholder:"Interview Title" %>
+              <%= f.text_field :title, placeholder:"Interview Title", required:  true %>
               <%= f.label "What was the date of the interview" %>
-              <%=   f.date_field(:date, class:"datepicker", placeholder:"Select Date of Interview", id:"date-pick")%>
+              <%=  f.date_field(:date, class:"datepicker", placeholder:"Select Date of Interview", required: true, id:"date-pick")%>
               <%= f.label "How many interviews have you had with #{@job.company.name}?"%>
               <%= f.select :number, [1, 2, 3, 4],  class:"browser-default" %>
               <br>
