@@ -48,6 +48,14 @@ footer {
   margin-left: 10px;
 }
 
+.hero-unit {
+  margin-top: 1vh;
+  background-image: image-url("pairing.png");
+  background-size: cover;
+  height: 87vh;
+  z-index: -1;
+}
+
 .page-footer {
   margin-top: 0 !important;
 }
@@ -55,6 +63,14 @@ footer {
 .sidebar {
   height: 87vh;
   overflow: scroll;
+}
+
+.padder {
+  padding-top: 5vh;
+}
+
+.main-image {
+  padding-top: 12vh
 }
 
 .new-job {
